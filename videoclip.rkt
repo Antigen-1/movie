@@ -3,15 +3,15 @@
 
 (define-data
   videoclip
-  (lib simple-python-api "lib.rkt")
+  (lib simple-python-api "lib.rkt" racket/promise)
   (representation
-   (read-videoclip (lazy-load (get-object-by-name moviepy 'VideoFileClip)
+   (read-videoclip (lazy-load (get-object-by-name (force moviepy) 'VideoFileClip)
                               (_pyunicode)
                               ()
                               PyObj*))
    (append-videoclip
     (lazy-load
-     (get-object-by-name moviepy 'concatenate_videoclips)
+     (get-object-by-name (force moviepy) 'concatenate_videoclips)
      ((pylistof PyObj*))
      ()
      PyObj*))
@@ -39,7 +39,7 @@
                  f))
    (stack-videoclips
     (lazy-load
-     (get-object-by-name moviepy 'clips_array)
+     (get-object-by-name (force moviepy) 'clips_array)
      ((pylistof (pylistof PyObj*)))
      ()
      PyObj*))

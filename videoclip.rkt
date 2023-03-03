@@ -39,10 +39,10 @@
                  f))
    (stack-videoclips
     (lazy-load
-     (get-object-by-name moviepy 'clips_array
-                         ((pylistof (pylistof PyObj*)))
-                         ()
-                         PyObj*)))
+     (get-object-by-name moviepy 'clips_array)
+     ((pylistof (pylistof PyObj*)))
+     ()
+     PyObj*))
    (resize-videoclip
     (lambda (c s)
       ((lazy-load (check-and-handle-attribute c 'resize get-attribute)

@@ -36,7 +36,7 @@
                                ()
                                (pylistof (pylistof _pyssize)))))
                  (decrement-reference r)
-                 f)))
+                 f))
    (stack-videoclips
     (lazy-load
      (get-object-by-name moviepy 'clips_array

@@ -15,8 +15,8 @@
                               (compose datum->syntax
                                        string->symbol
                                        (lambda (sym)
-                                         (string-replace (symbol->string sym) "_" "-"))))
-                             (syntax->datum #'(binding ...))))
+                                         (string-replace (symbol->string sym) "_" "-")))
+                              (syntax->datum #'(binding ...)))))
        #'(begin
            (define mod (delay
                          (set-python-path (path->complete-path libdir))

@@ -1,5 +1,5 @@
 #lang racket/base
-(require data-abstraction racket/runtime-path racket/promise
+(require data-abstraction racket/runtime-path racket/promise simple-python-api
          (for-syntax racket/base racket/string))
 (provide define-moviepy)
 

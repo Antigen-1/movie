@@ -1,4 +1,4 @@
-from moviepy import VideoFileClip
+from moviepy.video.io.VideoFileClip import VideoFileClip
 
 def read_videoclip(p):
     return VideoFileClip(p)

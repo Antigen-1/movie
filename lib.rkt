@@ -12,7 +12,7 @@
       ((abstract body) ...))
      (with-syntax ((name (datum->syntax #'stx (string->symbol (syntax->datum #'lib))))
                    ((id ...) (map
-                              (compose datum->syntax
+                              (compose (lambda (s) (datum->syntax #'stx s))
                                        string->symbol
                                        (lambda (sym)
                                          (string-replace (symbol->string sym) "_" "-")))

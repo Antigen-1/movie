@@ -19,7 +19,7 @@ def rotate_videoclip(c, a):
     # anticlockwise
     return c.rotate(a)
 
-def extract_subregion(c x y):
+def extract_subregion(c, x, y):
     return c.crop(x[0],y[0],x[1],y[1])
 
 def mirror_x(c):

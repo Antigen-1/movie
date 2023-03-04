@@ -15,7 +15,7 @@
                               (compose (lambda (s) (datum->syntax #'stx s))
                                        string->symbol
                                        (lambda (sym)
-                                         (string-replace (symbol->string sym) "_" "-")))
+                                         (string-replace (symbol->string sym) "-" "_")))
                               (syntax->datum #'(binding ...)))))
        #'(begin
            (define mod (delay
@@ -27,10 +27,10 @@
              name
              (lib)
              (representation
-              (id (lazy-load (get-object-by-name (force mod) (quote binding))
-                             (arg ...)
-                             ((key value) ...)
-                             out))
+              (binding (lazy-load (get-object-by-name (force mod) (quote id))
+                                  (arg ...)
+                                  ((key value) ...)
+                                  out))
               ...)
              (abstraction
               (abstract body)

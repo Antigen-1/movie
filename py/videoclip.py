@@ -1,4 +1,5 @@
 from moviepy.video.io.VideoFileClip import VideoFileClip
+from moviepy.video.compositing.concatenate import concatenate_videoclips
 
 def read_videoclip(p):
     return VideoFileClip(p)
@@ -21,6 +22,9 @@ def rotate_videoclip(c, a):
 
 def extract_subregion(c, x, y):
     return c.crop(x[0],y[0],x[1],y[1])
+
+def append_videoclips(l):
+    return concatenate_videoclips(l)
 
 def mirror_x(c):
     c.mirror_x()

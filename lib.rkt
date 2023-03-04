@@ -7,10 +7,10 @@
 
 (define-syntax (define-moviepy stx)
   (syntax-case stx ()
-    ((_ lib
+    ((_ libname
       ((binding (arg ...) ((key value) ...) out) ...)
       ((abstract body) ...))
-     (with-syntax ((name (datum->syntax #'stx (string->symbol (syntax->datum #'lib))))
+     (with-syntax ((name (datum->syntax #'stx (string->symbol (syntax->datum #'libname))))
                    ((id ...) (map
                               (compose (lambda (s) (datum->syntax #'stx s))
                                        string->symbol

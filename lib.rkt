@@ -1,5 +1,5 @@
 #lang racket/base
-(require data-abstraction racket/runtime-path racket/promise simple-python-api
+(require data-abstraction racket/runtime-path racket/promise
          (for-syntax racket/base racket/string))
 (provide define-moviepy)
 
@@ -25,7 +25,7 @@
                          m))
            (define-date
              name
-             (lib)
+             (lib simple-python-api)
              (representation
               (id (lazy-load (get-object-by-name (force mod) (quote binding))
                              (arg ...)

@@ -3,9 +3,6 @@ from moviepy import VideoFileClip
 def read_videoclip(p):
     return VideoFileClip(p)
 
-def get_aspect(c):
-    return c.aspect_ratio
-
 def get_height(c):
     return c.h
 

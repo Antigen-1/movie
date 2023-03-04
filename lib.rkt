@@ -7,7 +7,7 @@
 
 (define-syntax (define-moviepy stx)
   (syntax-case stx ()
-    ((lib
+    ((_ lib
       ((binding (arg ...) ((key value) ...) out) ...)
       ((abstract body) ...))
      (with-syntax ((name (datum->syntax #'stx (string->symbol (syntax->datum #'lib))))

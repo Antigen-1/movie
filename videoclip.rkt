@@ -15,9 +15,9 @@
    (mirror_x (PyObj*)
              ()
              PyObj*)
-   (mirror_y (PyObj*
-              ()
-              PyObj*))
+   (mirror_y (PyObj*)
+             ()
+             PyObj*)
    (save_frame (PyObj* _pyunicode _pydouble)
                ()
                PyObj*)

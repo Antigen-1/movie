@@ -20,7 +20,7 @@
        #'(begin
            (define mod (delay
                          (set-python-path (path->complete-path libdir))
-                         (define m (import lib))
+                         (define m (import libname))
                          (at-exit (lambda () (decrement-reference m)))
                          m))
            (define-data

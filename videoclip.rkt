@@ -1,5 +1,5 @@
 #lang racket/base
-(require "lib.rkt")
+(require "lib.rkt" simple-python-api)
 
 (define-moviepy
   "videoclip"

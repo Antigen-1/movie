@@ -25,7 +25,7 @@
                          m))
            (define-data
              name
-             (lib simple-python-api)
+             (lib)
              (representation
               (id (lazy-load (get-object-by-name (force mod) (quote binding))
                              (arg ...)

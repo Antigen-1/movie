@@ -23,7 +23,7 @@
                          (define m (import lib))
                          (at-exit (lambda () (decrement-reference m)))
                          m))
-           (define-date
+           (define-data
              name
              (lib simple-python-api)
              (representation

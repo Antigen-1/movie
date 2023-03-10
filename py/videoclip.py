@@ -34,6 +34,10 @@ def mirror_y(c):
     c.mirror_y()
     return c
 
+def map_frames(c, func):
+    c.image_transform(func)
+    return c
+
 def save_frame(c, p, t):
     c.save_frame(p, t=t)
 
